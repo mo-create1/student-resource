@@ -11,19 +11,6 @@ const resources = [
     description: "Access to free books, study spaces, and online resources.",
     link: "https://www.yourlibrarywebsite.com/"
   },
-  const resources = [
-  {
-    name: "Khan Academy",
-    category: "tutoring",
-    description: "Free online courses and tutorials in many subjects.",
-    link: "https://www.khanacademy.org/"
-  },
-  {
-    name: "Local Library",
-    category: "library",
-    description: "Access to free books, study spaces, and online resources.",
-    link: "https://www.yourlibrarywebsite.com/"
-  },
   {
     name: "ScholarshipPortal",
     category: "scholarships",
@@ -47,20 +34,6 @@ const resources = [
     category: "community",
     description: "Provides food and resources for families in need.",
     link: "https://www.localfoodbank.org/"
-  }
-];
-
-  {
-    name: "ScholarshipPortal",
-    category: "scholarships",
-    description: "Find scholarships and financial aid opportunities.",
-    link: "https://www.scholarshipportal.com/"
-  },
-  {
-    name: "Teen Mental Health Hotline",
-    category: "mental-health",
-    description: "Free, confidential support for teens struggling with mental health.",
-    link: "https://www.teenmentalhealth.org/"
   }
 ];
 
@@ -96,11 +69,13 @@ function filterResources() {
 
   displayResources(filtered);
 }
+
+displayResources(resources);
+searchInput.addEventListener('input', filterResources);
+categoryFilter.addEventListener('change', filterResources);
+
 function toggleMenu() {
   const nav = document.getElementById("navMenu");
   nav.classList.toggle("hidden");
 }
 
-displayResources(resources);
-searchInput.addEventListener('input', filterResources);
-categoryFilter.addEventListener('change', filterResources);
