@@ -96,6 +96,10 @@ function filterResources() {
 
   displayResources(filtered);
 }
+function toggleMenu() {
+  const nav = document.getElementById("navMenu");
+  nav.classList.toggle("hidden");
+}
 
 displayResources(resources);
 searchInput.addEventListener('input', filterResources);
