@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
@@ -6,22 +7,35 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   background: #4CAF50;
   color: white;
-  padding: 20px;
+  padding: 20px 20px 40px 20px;
   text-align: center;
-  position: relative;
+  position: relative; /* needed for menu-icon absolute */
 }
 
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 10px 0 0 0;
+  font-weight: 500;
+}
+
+/* Hamburger Menu */
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 101;
 }
 
+/* Navigation Menu */
 nav {
   display: flex;
   flex-direction: column;
@@ -32,6 +46,7 @@ nav {
   background: #4CAF50;
   padding: 10px;
   border-radius: 5px;
+  z-index: 100;
 }
 
 nav a {
@@ -44,18 +59,25 @@ nav a {
   display: none;
 }
 
+/* Search Section */
 .search-section {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 20px;
   gap: 10px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap; /* wrap on smaller screens */
 }
 
-input, select {
+.search-section input,
+.search-section select {
   padding: 8px;
   font-size: 16px;
 }
 
+/* Resources Section */
 .resources {
   display: flex;
   flex-wrap: wrap;
@@ -79,21 +101,48 @@ input, select {
 .resource-card a {
   color: #4CAF50;
   text-decoration: none;
+  font-weight: bold;
 }
 
+/* About & Submit Sections */
 section#about, section#submit {
   max-width: 800px;
   margin: 20px auto;
-  padding: 10px;
+  padding: 15px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 15px;
   background: #222;
   color: white;
   margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .menu-icon {
+    top: 15px;
+    right: 15px;
+  }
+
+  .search-section input,
+  .search-section select {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  nav {
+    right: 15px;
+    top: 50px;
+  }
+
+  .resource-card {
+    width: 90%;
+    max-width: 300px;
+  }
 }
