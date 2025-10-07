@@ -1,39 +1,19 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #f4f4f4;
   color: #333;
 }
-body {
-  font-family: 'Roboto', Arial, sans-serif;
-}
+
 header {
   background: #4CAF50;
   color: white;
   padding: 20px;
   text-align: center;
+  position: relative;
 }
 
-.search-section {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-  gap: 10px;
-}
-
-input, select {
-  padding: 8px;
-  font-size: 16px;
-}
-
-.resources {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px;
-}
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
@@ -64,6 +44,26 @@ nav a {
   display: none;
 }
 
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
+}
+
+input, select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.resources {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
 .resource-card {
   background: white;
   padding: 15px;
@@ -79,6 +79,15 @@ nav a {
 .resource-card a {
   color: #4CAF50;
   text-decoration: none;
+}
+
+section#about, section#submit {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 footer {
